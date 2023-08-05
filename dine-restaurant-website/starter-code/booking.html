@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300&family=Poppins:wght@100;200;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Frontend Mentor | Dine Website Challenge</title>
+  </head>
+  <body>
+    <header class="header-booking">
+      <div class="header__content-b">
+        <a href="./index.html"
+          ><img src="./images/logo.svg" class="logo-svg"
+        /></a>
+        <div class="header__content-text">
+          <p class="heading-xl fs-l">Reservations</p>
+          <p class="body2">
+            We can’t wait to host you. If you have any special requirements
+            please feel free to call on the phone number below. We’ll be happy
+            to accommodate you.
+          </p>
+          <button class="btn-light-normal" id="scrollButton">
+            Reserve Place
+          </button>
+        </div>
+      </div>
+      <div class="header__form"></div>
+    </header>
+
+    <form action="" class="shadow" id="form">
+      <input type="text" name="name" placeholder="Name" />
+      <input type="email" name="email" placeholder="Email" />
+      <div class="input-date-wrapper">
+        <p class="body2">Pick a date</p>
+        <div class="input-date">
+          <input
+            type="number"
+            id="month"
+            name="month"
+            min="1"
+            max="12"
+            placeholder="MM"
+            required
+          />
+          <input
+            type="number"
+            id="day"
+            name="day"
+            min="1"
+            max="31"
+            placeholder="DD"
+            required
+          />
+          <input
+            type="number"
+            id="year"
+            name="year"
+            min="2023"
+            max="2024"
+            placeholder="YYYY"
+            required
+          />
+        </div>
+      </div>
+      <div class="input-time-wrapper">
+        <p class="body2">Pick a time</p>
+        <div class="input-time">
+          <input
+            type="number"
+            id="hour"
+            name="hour"
+            min="0"
+            max="59"
+            placeholder="09"
+            required
+          />
+          <input
+            type="number"
+            id="minute"
+            name="minute"
+            min="0"
+            max="59"
+            placeholder="00"
+            required
+          />
+          <select id="ampm" name="ampm">
+            <option value="AM">AM</option>
+            <option value="PM">PM</option>
+          </select>
+        </div>
+      </div>
+      <div class="input-number">
+        <button class="minus-btn" type="button">-</button>
+        <span class="heading-s" id="people"> 1 People</span>
+        <button class="plus-btn" type="button">+</button>
+      </div>
+      <input type="submit" value="make reservation" class="btn-dark-normal" />
+    </form>
+    <footer class="footer-booking">
+      <div class="dine-info">
+        <img src="./images/logo.svg" alt="" />
+        <div class="location">
+          <p>Marthwaite, Sedbergh</p>
+          <p>Cumbria</p>
+          <p>+00 44 123 4567</p>
+        </div>
+        <div class="open-hour">
+          <p>Open Times</p>
+          <p>Mon - Fri: 09:00 AM - 10:00 PM</p>
+          <p>Sat - Sun: 09:00 AM - 11:30 PM</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script src="helperBooking.js"></script>
+</html>

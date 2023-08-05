@@ -1,0 +1,640 @@
+:root {
+  --clr-neutral-100: hsla(0, 0%, 100%, 1);
+  --clr-primary-800: hsl(0, 0%, 7%);
+  --clr-primary-400: hsl(27, 22%, 51%);
+
+  --clr-secondary-900: #17192b;
+  --clr-secondary-800: #242b37;
+  --clr-secondary-600: hsl(0, 0%, 30%);
+  --clr-secondary-300: hsl(217, 14%, 42%);
+
+  --ff-base: "League Spartan", sans-serif;
+
+  --fw-regular: 300;
+  --fw-semi-bold: 400;
+  --fw-bold: 700;
+
+  --fs-200: 0.875rem;
+  --fs-300: 1rem;
+  --fs-400: 1.125rem;
+  --fs-500: 1.375rem;
+  --fs-600: 1.75rem;
+  --fs-700: clamp(2rem, 10vw - 0.5rem, 3.25rem);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  /* display: block; */
+}
+
+.fs-xl {
+  font-size: 5rem;
+}
+.fs-l {
+  font-size: 3rem;
+}
+.fs-m {
+  font-size: 2rem;
+}
+.fs-s {
+  font-size: 1.0625rem;
+}
+
+.heading-xl {
+  color: inherit;
+  font-family: var(--ff-base);
+  font-weight: var(--fw-regular);
+  line-height: 3rem;
+  letter-spacing: -1px;
+}
+
+.heading-l {
+  color: inherit;
+  font-family: var(--ff-base);
+  font-weight: var(--fw-bold);
+  line-height: 3rem;
+  letter-spacing: -0.5px;
+}
+
+.heading-m {
+  color: inherit;
+  font-family: sans-serif;
+  font-weight: var(--fw-bold);
+  line-height: 2.2rem;
+  letter-spacing: -0.25px;
+}
+
+.heading-s {
+  color: inherit;
+  text-align: center;
+  font-family: var(--ff-base);
+  font-weight: var(--fw-bold);
+  line-height: 1.75rem;
+  letter-spacing: 2.5px;
+}
+
+.body1 {
+  color: inherit;
+  font-family: var(--ff-base);
+  font-size: 1.5rem;
+  font-weight: var(--fw-semi-bold);
+  line-height: 1.875rem;
+}
+
+.body2 {
+  color: inherit;
+  font-family: var(--ff-base);
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: var(--fw-semi-bold);
+  line-height: 1.625rem;
+}
+
+.btn-dark-normal {
+  background-color: black;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: var(--ff-base);
+  font-weight: var(--fw-bold);
+  border: 0.5px solid #fff;
+  line-height: 2rem;
+  letter-spacing: 2.5px;
+  padding: 0.5rem 3rem;
+  margin: 2.5rem 0;
+}
+.btn-dark-normal:hover {
+  background-color: white;
+  color: var(--clr-secondary-900);
+}
+
+.btn-light-normal {
+  background-color: transparent;
+  color: black;
+  text-transform: uppercase;
+  font-family: var(--ff-base);
+  font-weight: var(--fw-bold);
+  border: 0.5px solid black;
+  line-height: 2rem;
+  letter-spacing: 2.5px;
+  padding: 0.5rem 3rem;
+  margin: 2.5rem 0;
+}
+.btn-light-normal:hover {
+  background-color: #111;
+  color: #fff;
+}
+
+.shadow {
+  box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.4);
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+}
+button {
+  cursor: pointer;
+}
+
+body {
+  margin: 0;
+  font-family: var(--ff-base);
+  font-weight: var(--fw-regular);
+  line-height: 1.5;
+}
+
+.logo-svg {
+  margin: 0 auto;
+}
+
+/*----------------------header-----------------------*/
+header {
+  background-image: url("./images/homepage/hero-bg-mobile@2x.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-color: var(--clr-primary-800);
+  color: white;
+  height: 100vh;
+}
+.header__content {
+  text-align: center;
+  max-width: 600px;
+  padding: 18em 1em;
+  padding-bottom: 10em;
+  margin: 0 auto;
+}
+.header__content > :not(button) {
+  padding: 0.5em 0;
+}
+
+@media screen and (min-width: 468px) {
+  .header__content {
+    padding: 25em 1em;
+    padding-bottom: 10em;
+  }
+}
+
+@media screen and (min-width: 1150px) {
+  header {
+    background-image: url("./images/homepage/hero-bg-tablet@2x.jpg");
+    background-size: 100% 140%;
+  }
+}
+
+/*----------------main---------------------*/
+main {
+  text-align: center;
+}
+main > * {
+  padding: 1em;
+}
+/* .img {
+  box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.4);
+  margin: 1rem auto;
+} */
+.promotion-content {
+  margin: 3rem 0;
+}
+.promotion-content img {
+  width: 90%;
+  max-width: 500px;
+}
+.promotion-content > :not(picture) {
+  margin: 0 auto;
+  max-width: 500px;
+  padding: 0.8em 0;
+}
+
+.highlight-menu {
+  background-color: #111;
+  color: white;
+  padding: 10em 1em;
+}
+.highlight-header > * {
+  padding: 0.5em;
+}
+.highlight-food {
+  max-width: 500px;
+  padding: 3em 0;
+
+  margin: 0 auto;
+}
+.highlight-food-text {
+  padding: 1em 0;
+}
+
+.events {
+  margin: 6em 0;
+}
+.events picture,
+.events img {
+  max-width: 500px;
+  margin: 1rem auto;
+}
+.events ul {
+  color: var(--clr-secondary-600);
+  list-style-type: none;
+  text-transform: uppercase;
+
+  padding: 0;
+}
+.events li {
+  padding: 0.5em;
+  position: relative;
+}
+.events label {
+  cursor: pointer;
+}
+input[type="radio"] {
+  display: none;
+}
+
+input[name="event-type"]:checked ~ label {
+  font-weight: var(--fw-bold);
+  color: black;
+}
+input[name="event-type"]:checked ~ label::after {
+  content: "";
+  display: block;
+  width: 2rem;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  border-bottom: 2px solid black;
+}
+.social-ev,
+.special-ev,
+.family-gather-ev {
+  margin-top: 2em;
+  max-width: 400px;
+  margin: 0 auto;
+  margin-top: 2rem;
+}
+.social-ev > p,
+.special-ev > p,
+.family-gather-ev > p {
+  margin-top: 1em;
+}
+.social-ev,
+.special-ev,
+.social-ev2,
+.special-ev2 {
+  display: none;
+}
+
+/*-------------footer--------------------*/
+footer {
+  color: white;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+.reservation-section {
+  background: url("./images/homepage/ready-bg-mobile@2x.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  grid-area: 1 / 1 / 2 / 4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 3em 0;
+}
+.reservation-section > * {
+  text-align: center;
+  margin: 1em auto;
+}
+.reservation-section button {
+  background-color: transparent;
+}
+.dine-info {
+  background-color: black;
+  grid-column: span 3;
+  text-align: center;
+  padding: 1em 0;
+}
+.dine-info > * {
+  padding: 1em 0;
+}
+
+/*------------booking----------------------*/
+.header-booking {
+  background: none;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.header__content-b {
+  background: url("./images/booking/hero-bg-mobile@2x.jpg");
+  background-size: 100% 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+  height: 60%;
+  padding: 3em 1em;
+  margin: 0;
+}
+
+.header__content-b > * {
+  max-width: 400px;
+}
+
+.header__content-text {
+  margin: 2em 0;
+}
+.header__content-text button {
+  margin: 1.5em 0;
+  color: white;
+  border: 1px solid white;
+}
+.header__content-text button:hover {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+}
+.header__form {
+  background-color: white;
+  height: 40%;
+}
+form {
+  background-color: white;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  max-width: 350px;
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+  margin: 1em auto;
+}
+
+form input,
+form select,
+.minus-btn,
+.plus-btn {
+  background-color: transparent;
+  outline: transparent;
+  border: none;
+  border-bottom: 1px solid black;
+  padding: 1em;
+  /* padding-top: 0.5em; */
+}
+
+form p {
+  margin-top: 1em;
+}
+
+.input-number,
+.input-time,
+.input-date {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  width: 100%;
+}
+
+.input-date input,
+.input-time input {
+  padding-top: 0;
+}
+
+.input-number input,
+.minus-btn,
+.plus-btn {
+  border: none;
+  text-align: center;
+}
+
+.input-number {
+  border-bottom: 1px solid black;
+}
+
+.footer-booking {
+  grid-template-rows: 1fr;
+}
+
+@media screen and (min-width: 768px) {
+  .header__content-b {
+    background: url("./images/booking/hero-bg-tablet@2x.jpg");
+    background-size: 100%;
+    padding: 2em 4em;
+  }
+  .header__content-b img {
+    margin: 0;
+    align-self: baseline;
+  }
+  .header__content-text button {
+    display: none;
+  }
+
+  .input-date-wrapper,
+  .input-time-wrapper {
+    display: flex;
+  }
+  .input-date-wrapper p,
+  .input-time-wrapper p {
+    width: 40%;
+  }
+  .input-date {
+    align-items: center;
+  }
+  form {
+    max-width: 540px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .header__content-b {
+    background: url("./images/booking/hero-bg-desktop@2x.jpg");
+    background-size: 100% 100%;
+    align-items: baseline;
+    text-align: left;
+    padding: 2em 8em;
+  }
+  .header__content-text {
+    margin: 4em 0;
+  }
+  .header__content-text > * {
+    padding: 0.2em 0;
+  }
+  form {
+    top: 22%;
+    left: 70%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  :root {
+    font-size: 20px;
+  }
+  header {
+    background-image: url("./images/homepage/hero-bg-tablet@2x.jpg");
+  }
+  .header__content {
+    margin: 0 auto;
+    padding: 23em 1em;
+    padding-bottom: 10em;
+  }
+
+  .promotion-content-text > * {
+    padding: 0.4rem;
+  }
+
+  .highlight-menu > * {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .highlight-food {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 700px;
+    gap: 3em;
+    margin: none;
+  }
+  .highlight-food-text {
+    text-align: left;
+    width: 70%;
+  }
+
+  .events ul {
+    display: flex;
+    justify-content: center;
+  }
+  .events picture {
+    max-width: 750px;
+    margin: 1rem auto;
+  }
+
+  .reservation-section {
+    background: url("./images/homepage/ready-bg-tablet@2x.jpg");
+    background-size: 100% 100%;
+    padding: 3em 0;
+  }
+  .dine-info {
+    text-align: left;
+    display: grid;
+    grid-template-columns: 0.8fr 2fr;
+    padding: 5em 5em;
+  }
+  .dine-info img {
+    grid-row: span 2;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  :root {
+    font-size: 24px;
+  }
+  header {
+    background-image: url("./images/homepage/hero-bg-desktop@2x.jpg");
+    background-size: 110%;
+  }
+  .header__content {
+    text-align: left;
+
+    max-width: 800px;
+    margin: 0;
+    padding: 2em 7em;
+  }
+  .header__content > :not(button) {
+    padding: 0.2em 0;
+  }
+  .header__content img {
+    margin: 0;
+    padding: 5em 0;
+  }
+
+  .promotion-content {
+    display: flex;
+    justify-content: center;
+    text-align: left;
+    gap: 1em;
+  }
+  .promotion-content > :not(picture) {
+    margin: 0;
+  }
+  .promotion-content:nth-child(2) .promotion-content-text {
+    order: -1;
+  }
+
+  .highlight-menu {
+    display: flex;
+    justify-content: space-around;
+    text-align: left;
+    padding: 6em 6em;
+    padding-top: 13em;
+    gap: 2em;
+  }
+  .highlight-header > *,
+  .highlight-foods {
+    padding: 0.5em 0;
+    /* width: 40%; */
+    max-width: 700px;
+  }
+  .highlight-food {
+    padding: 0.5em 0;
+  }
+
+  .events {
+    display: flex;
+    justify-content: center;
+  }
+  .events > * {
+    width: 40%;
+  }
+  .events picture {
+    max-width: 600px;
+    margin: 1rem auto;
+  }
+  .event-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    gap: 2em;
+    /* padding: 0 6em; */
+  }
+  .event-list > * {
+    align-items: baseline;
+    margin: 0;
+  }
+  .event-list ul {
+    flex-direction: column;
+    order: 5;
+  }
+  .event-list button {
+    align-self: baseline;
+  }
+
+  .reservation-section {
+    background: url("./images/homepage/ready-bg-desktop@2x.jpg");
+    background-size: 100% 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0em 8em;
+  }
+  .reservation-section > * {
+    margin: 0;
+  }
+  .dine-info {
+    text-align: left;
+    display: grid;
+    grid-template-columns: 0.8fr 0.9fr 1fr;
+    padding: 2em 8em;
+  }
+  .dine-info img {
+    grid-row: span 2;
+  }
+}
